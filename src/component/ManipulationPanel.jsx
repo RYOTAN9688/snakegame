@@ -7,11 +7,13 @@ const ManipulationPanel = ({ onChange }) => {
     const onDown = () => onChange("down")
 
     return (
-        <div>
-            <button onClick={onLeft}>←</button>
-            <button onClick={onUp}> ↑</button>
-            <button onClick={onRight}>→</button>
-            <button onClick={onDown}>↓</button>
+        <div className="manipulation-panel">
+            <button className="manipulation-btn btn btn-left" onClick={onLeft}>←</button>
+            <div>
+                <button className="manipulation-btn btn btn-up" onClick={onUp}> ↑</button>
+                <button className="manipulation-btn btn btn-down" onClick={onDown}>↓</button>
+            </div>
+            <button className="manipulation-btn btn btn-right" onClick={onRight}>→</button>
         </div>
     );
 };
